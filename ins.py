@@ -8,7 +8,7 @@ Created on Sun Aug 23 15:35:16 2020
 
 from flask import Flask, render_template, request
 import pickle
-app = Flask(__name__,template_folder='C:/Users/Smizzy/Documents/data science notes/project-ins')
+app = Flask(__name__)
 
 model = pickle.load(open('model.pkl','rb'));
 
