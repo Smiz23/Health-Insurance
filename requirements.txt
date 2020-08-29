@@ -69,3 +69,4 @@ wincertstore==0.2
 xgboost==1.2.0
 zipp==3.1.0
 gunicorn
+Flask-Images==3.0.2
