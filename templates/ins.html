@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:white">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2 class='header'>Premium based on your health factors</h2><br><br>
+            <b><label for="Age" class='h1'>Age:</label></b>
+            <input id="Age" name="Age" type="number " required="required">
+	    <b><label for"BMI" class='h2'>BMI:</label></b>
+	    <input id="BMI" name="BMI" type="number " required="required"><br></br><br></br>
+            <b><label for="Number of Dependents" class='h3'>Dependents:</label></b>
+	    <input id="Number" name="Number of Dependents" type="number " required="required">
+            <b><label for="Sex" class='h4'>Sex:</label></b>
+	    <select name="Sex" id="Sex" required="required">
+                <option value="-select-"></option>
+		<option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br></br><br></br>
+            <b><label for="Smoking Habit" class='h5'>Smoking Habit:</label><b>
+	    <select name="Smoking Habit" id="Smoking" required="required">
+		<option value="-select-"></option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+	    <label for="Region" class='h6'>Region:</label></b>
+	    <select name="Region" id="Region" required="required">
+		<option value="-select-"></option>
+                <option value="Northeast">Northeast</option>
+                <option value="Northwest">Northwest</option>
+		<option value="Southeast">Southeast</option>
+                <option value="Southwest">Southwest</option>
+            </select><br></br><br></br>
+            <br><br><button id="sub" type="submit ">Calculate Premium</button>
+            <br>
+
+
+
+
+        </form>
+
+	
+        <br><br><h3 class='h7'>{{output}}</h3>
+    </div>
+
+
+
+
+    <style>
+	body {
+ 		 background-image:url({{url_for('static',filename='img2.jpg')}});
+		 font-style: Arial;
+		 font-size: 20px;
+	     }
+	
+	.header {
+		 
+		 text-align:right;
+	   }
+        
+	#Age {
+		position: relative;
+		left: 650px;
+	}
+	.h1 {
+		position: relative;
+		left:650px;
+	     }
+	
+        #BMI {
+		position: relative;
+		left: 800px;
+	}
+	.h2 {
+		position: relative;
+		left:800px;
+	     }
+        #Number {
+		position: relative;
+		left: 650px;
+	}
+	.h3 {
+		position: relative;
+		left:650px;
+	     }
+        
+        #Sex {
+		position: relative;
+		left: 730px;
+	}
+	.h4 {
+		position: relative;
+		left:730px;
+	     }
+       #Region {
+		position: relative;
+		left: 830px;
+	}
+	.h6 {
+		position: relative;
+		left:830px;
+	     }
+        
+        #Smoking {
+		position: relative;
+		left: 650px;
+	         }
+	.h5 {
+		position: relative;
+		left:650px;
+	     }
+	#sub   {
+		position: relative;
+		left: 900px;
+		}
+	.h7   {
+		position: relative;
+		left: 800px;
+		}
+       
+    </style>
+</body>
+
+</html>
